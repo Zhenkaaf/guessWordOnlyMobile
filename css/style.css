@@ -1,0 +1,35 @@
+.box {
+    height: 500px;
+    border: 3px solid green;
+}
+.letters {
+    height: 100px;
+    background-color: aquamarine;
+    margin-bottom: 10px;
+    display: flex;
+}
+.item {
+    height: 30px;
+    width: 30px;
+margin: 10px;
+padding: 10px;
+background-color: yellow;
+}
+
+.result {
+    display: flex;
+    height: 100px;
+    background-color: blueviolet;
+    margin-bottom: 10px;
+}
+.resitem {
+    margin: 10px;
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+    background-color: darkkhaki;
+}
+.song {
+    height: 100px;
+    border: 1px solid black;
+}

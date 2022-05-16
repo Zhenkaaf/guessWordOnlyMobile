@@ -41,7 +41,7 @@ background-color: yellow;
 .wrapper {
     outline: 1px solid gold;
     position: relative;
-    margin: 50px;
+    /* margin: 50px; */
     /* max-width: 440px; */
     max-width: 420px;
     display: flex;

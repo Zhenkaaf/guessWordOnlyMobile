@@ -1,81 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <title>wordsPlay</title>
+    <title>Document</title>
 </head>
+
 <body>
-    <div class="wrapper">
-        <div class="empty">
-            <div class="drag">i</div>
+    <div class="container">
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide" id='1'>
+                    <div class="text">Что нужно обязательно сделать на ночь?</div>
+                    <div class="wrap">
+                        <div class="box">
+
+                        </div>
+                        <div class="boxRes" id="top">
+
+                        </div>
+
+                    </div>
+
+                    <div class="song" id="audio1">
+                        <audio controls src="./audio/1.ogg"></audio>
+                    </div>
+                    <button class="butCheck">ПРОВЕРИТЬ</button>
+                    <button class="butStart">START</button>
+                </div>
+                <div class="swiper-slide" id='2'>
+                    <div class="text">что я с тобой сделал, когда ты распереживался?</div>
+                    <div class="wrap">
+                        <div class="box">
+
+                        </div>
+                        <div class="boxRes" id="top">
+
+                        </div>
+
+                    </div>
+
+                    <div class="song" id="audio2">
+                        <audio controls src="./audio/2.ogg"></audio>
+                    </div>
+                    <button class="butCheck">ПРОВЕРИТЬ</button>
+                    <button class="butStart">START</button>
+                </div>
+                <div class="swiper-slide" id='3'>
+                    <div class="text">какой бывает фокус?</div>
+                    <div class="wrap">
+                        <div class="box">
+
+                        </div>
+                        <div class="boxRes" id="top">
+
+                        </div>
+
+                    </div>
+
+                    <div class="song" id="audio3">
+                        <audio controls src="./audio/3.m4a"></audio>
+                    </div>
+                    <button class="butCheck">ПРОВЕРИТЬ</button>
+                    <button class="butStart">START</button>
+                </div>
+                <div class="swiper-slide" id='4'>
+                    <div class="text">что обычно говорил Зиня в гостях у Димона, когда Димон резал колбасу. (ответ состоит из двух слов, квадратик без буквы - означает пробел) подсказка: первая буква "б" последняя "й", пробел на 7 месте</div>
+                    <div class="wrap ">
+                        <div class="box">
+
+                        </div>
+                        <div class="boxRes" id="top">
+
+                        </div>
+
+                    </div>
+
+                    <div class="song" id="audio4">
+                        <audio controls src="./audio/4.ogg"></audio>
+                    </div>
+                    <button class="butCheck">ПРОВЕРИТЬ</button>
+                    <button class="butStart loNone">START</button>
+                    <button class="longWord" type="dis" disabled>ПЕРЕВЕРНИ ТЕЛЕФОН ГОРИЗОНТАЛЬНО</button>
+                </div>
+                
+
+                
+                
+            </div>
+            <div class="arrowsBlock"> <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div></div>
+            
+
+           
+
         </div>
-        <div class="empty">
-            <div class="drag">s</div>
-        </div>
-        <div class="empty">
-            <div class="drag">k</div>
-        </div>
-        <div class="empty">
-            <div class="drag">r</div>
-        </div>
-        <div class="empty">
-            <div class="drag">r</div>
-        </div>
-        <div class="empty">
-            <div class="drag">r</div>
-        </div>
-        <div class="empty">
-            <div class="drag">r</div>
-        </div>
-        <div class="empty">
-            <div class="drag">r</div>
-        </div>
-        <div class="empty">
-            <div class="drag">r</div>
-        </div>
-        <div class="empty">
-            <div class="drag">r</div>
-        </div>
-        <div class="empty res"></div>
-        <div class="empty res"></div>
-        <div class="empty res"></div>
-        <div class="empty res"></div>
-        <div class="empty res"></div>
-        <div class="empty res"></div>
-        <div class="empty res"></div>
-        <div class="empty res"></div>
-        <div class="empty res"></div>
-        <div class="empty res"></div>
+
     </div>
-    <div class="song" id="planB">
-        <audio controls src="./planB.m4a"></audio>
-    </div>
-    <button class="button" >check</button>
 
 
-
-
-
-    <!--  <div class="box">
-        <div class="letters">
-            <div class="item" id="a" draggable="true">а</div>
-            <div class="item" draggable="true">л</div>
-            <div class="item" draggable="true">д</div>
-            <div class="item" draggable="true">у</div>
-            <div class="item" draggable="true">ч</div>
-        </div>
-        <div class="result">
-            <div class="resitem"></div>
-            <div class="resitem"></div>
-            <div class="resitem"></div>
-            <div class="resitem"></div>
-            <div class="resitem"></div>
-        </div>
-        <div class="song"></div>
-    </div> -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>
+
 </html>

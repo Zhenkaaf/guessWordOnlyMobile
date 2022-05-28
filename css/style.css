@@ -1,58 +1,80 @@
-.box {
-    height: 500px;
-    border: 3px solid green;
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
 }
-.letters {
-    height: 100px;
-    background-color: aquamarine;
-    margin-bottom: 10px;
-    display: flex;
+a {
+    text-decoration: none;
 }
-.item {
-    height: 30px;
-    width: 30px;
-margin: 10px;
-padding: 10px;
-background-color: yellow;
+ul,
+ol,
+li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+html,
+body {
+    height: 100%;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+}
 
-}
-
-.result {
-    display: flex;
-    height: 100px;
-    background-color: blueviolet;
-    margin-bottom: 10px;
+.swiper {
+  
    
-}
-.resitem {
-    margin: 10px;
-    padding: 10px;
-    height: 50px;
-    width: 50px;
-    background-color: darkkhaki;
-}
-.song {
-    height: 100px;
-    border: 1px solid black;
-}
-
-
-
-.wrapper {
-    outline: 1px solid gold;
+  }
+  .container {
+   height: 100%;
+   
+  }
+  .swiper-slide-active .wrap{
     position: relative;
-    /* margin: 50px; */
-    /* max-width: 440px; */
-    max-width: 420px;
+   
+    
+    margin: 0 auto;
+  }
+  .swiper-slide {
+    
+  }
+.wrap {
+    background-color: blueviolet;
+    padding: 10px;
+    min-height: 100px;
+}
+  .song {
+     margin-top: 10px;
+    display: none;
+}
+.song audio {
+    display: block;
+    margin: 0 auto;
+}
+
+.box {
     display: flex;
-    flex-wrap: wrap;
+}
+.boxRes {
+    display: flex;
 }
 .empty {
     margin: 5px;
     width: 30px;
     height: 30px;
     background-color: darkgray;
-
 }
 .drag {
     position: absolute;
@@ -60,10 +82,70 @@ background-color: yellow;
     height: 30px;
     background-color: red;
     z-index: 1;
+    color:azure;
+    font-size: 22px;
+    text-align: center;
 }
 .active {
     background-color: darkgreen;
 }
-#planB {
+
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: blueviolet;
+    color:azure;
+    border-radius: 10px;
+}
+.butCheck {
     display: none;
+}
+.swiper-button-prev,
+.swiper-button-next {
+    background-color: blueviolet;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+   position: relative;
+}
+.swiper-button-prev,
+.swiper-button-next::after {
+    color: red;
+}
+.text {
+    min-height: 50px;
+    padding: 10px;
+}
+
+.arrowsBlock {
+  padding: 50px 20px 0px 20px ;
+    display: flex;
+    justify-content: space-between;
+}
+.swiper-wrapper {
+    height: 100%;
+}
+.swiper {
+  
+}
+
+
+@media (max-width: 344px) {
+    .longWord:disabled { 
+        display: block;
+        color: chartreuse;
+        background-color: red;
+        border: 1px solid red;
+    
+    }
+    .loNone {
+        display: none;
+    }
+}
+@media (min-width: 344px) {
+    .longWord { 
+        display: none;
+    
+    }
 }

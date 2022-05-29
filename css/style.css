@@ -105,11 +105,11 @@ button {
 .swiper-button-prev,
 .swiper-button-next {
     background-color: blueviolet;
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-   position: relative;
-     margin-top: -10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    position: relative;
+    margin-top: -10px;
 }
 .swiper-button-prev,
 .swiper-button-next::after {

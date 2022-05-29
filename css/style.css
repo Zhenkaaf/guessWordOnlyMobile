@@ -131,32 +131,31 @@ button {
 }
 
 
-@media (max-width: 600px) {
-    .longWord:disabled { 
+
+/* портретная ориентация */
+@media screen and (orientation:portrait) {
+    body {
+        background-color: coral;
+    }
+
+    .fon {
+
+    }
+
+    .longWord {
         display: block;
-        color: chartreuse;
-        background-color: red;
-        border: 1px solid red;
-    
     }
     .loNone {
         display: none;
     }
 }
-@media (min-width: 600px) {
-    .longWord { 
-        display: none;
-    
-    }
-}
-@media screen and (orientation:portrait) {
-    body {
-        background-color: coral;
-    }
-}
+
 /* горизонтальная ориентация */
 @media screen and (orientation:landscape) {
     body {
         background-color: gray;
+    }
+    .longWord {
+        display: none;
     }
 }

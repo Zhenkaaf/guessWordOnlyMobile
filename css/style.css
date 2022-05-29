@@ -132,34 +132,29 @@ button {
 
 
 
+.butCheckNone {
+    height: 100%;
+}
 /* портретная ориентация */
 @media screen and (orientation:portrait) {
-    body {
-        background-color: coral;
-    }
-
-    .fon {
-        background-color: greenyellow;
-    }
-
     .longWord {
         display: block;
     }
-    .loNone {
+    .butStartNone {
         display: none;
     }
-     .longWordWrap {
+    .longWordWrap {
         display: none;
     }
+    .butCheckNone {
+        display: none;
+    }
+   
 }
 
 /* горизонтальная ориентация */
 @media screen and (orientation:landscape) {
-    body {
-        background-color: gray;
-    }
     .longWord {
         display: none;
     }
-    
 }

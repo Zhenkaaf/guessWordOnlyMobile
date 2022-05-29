@@ -139,7 +139,7 @@ button {
     }
 
     .fon {
-
+        background-color: greenyellow;
     }
 
     .longWord {
@@ -158,4 +158,5 @@ button {
     .longWord {
         display: none;
     }
+    
 }

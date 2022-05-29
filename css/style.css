@@ -148,6 +148,9 @@ button {
     .loNone {
         display: none;
     }
+     .longWordWrap {
+        display: none;
+    }
 }
 
 /* горизонтальная ориентация */

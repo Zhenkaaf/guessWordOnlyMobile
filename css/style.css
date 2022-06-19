@@ -6,17 +6,21 @@
     border: 0;
     box-sizing: border-box;
 }
+
 a {
     text-decoration: none;
 }
+
 ul,
 ol,
 li {
     list-style: none;
 }
+
 img {
     vertical-align: top;
 }
+
 h1,
 h2,
 h3,
@@ -26,68 +30,82 @@ h6 {
     font-weight: inherit;
     font-size: inherit;
 }
+
 html,
 body {
     height: 100%;
     font-size: 14px;
     font-family: 'Montserrat', sans-serif;
     background-color: coral;
+    color: azure;
 }
 
 .swiper {
   
-   
-  }
-  .container {
-   height: 100%;
-   
-  }
-  .swiper-slide-active .wrap{
+}
+.container {
+    height: 100%;
+
+}
+
+.swiper-slide-active .wrap {
     position: relative;
-   
-    
     margin: 0 auto;
-  }
-  .swiper-slide {
+}
+.swiper-wrapper {
+
+}
+.swiper-slide {
+   
+    min-height: 250px;
     
-  }
+}
+
 .wrap {
     background-color: blueviolet;
     padding: 8px;
-    min-height: 100px;
+    min-height: 104px;
+    margin-bottom: 10px;
 }
-  .song {
-     margin-top: 10px;
+
+.song {
+    margin-top: 10px;
     display: none;
 }
+
 .song audio {
     display: block;
     margin: 0 auto;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
+    margin-top: 20px
 }
 
 .box {
     display: flex;
 }
+
 .boxRes {
     display: flex;
 }
+
 .empty {
     margin: 3px;
-    width: 37px;
-    height: 37px;
+    width: 38px;
+    height: 38px;
     background-color: darkgray;
 }
+
 .drag {
     position: absolute;
-    width: 37px;
-    height: 37px;
+    width: 38px;
+    height: 38px;
     background-color: red;
     z-index: 1;
-    color:azure;
+   
     font-size: 22px;
     text-align: center;
 }
+
 .active {
     background-color: darkgreen;
 }
@@ -97,11 +115,31 @@ button {
     margin: 20px auto;
     padding: 10px;
     background-color: blueviolet;
-    color:azure;
+    color: azure;
     border-radius: 10px;
 }
+
 .butCheck {
     display: none;
+}
+
+.swiper-button-prev,
+.swiper-button-next::after {
+    color: azure;
+}
+
+.text {
+    min-height: 50px;
+    padding: 10px;
+    z-index: 5;
+}
+
+.arrowsBlock {
+    /*  padding: 50px 20px 0px 20px ; */
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+   
 }
 .swiper-button-prev,
 .swiper-button-next {
@@ -109,31 +147,45 @@ button {
     width: 60px;
     height: 60px;
     border-radius: 10px;
-    position: relative;
-    margin-top: -10px;
-}
-.swiper-button-prev,
-.swiper-button-next::after {
-    color:azure;
-}
-.text {
-    min-height: 50px;
-    padding: 10px;
+    position: absolute;
+   /*  margin-top: -350px; */
 }
 
-.arrowsBlock {
-    display: flex;
-    justify-content: space-between;
-}
 .swiper-wrapper {
     height: 100%;
 }
-.swiper {
+
+.swiper {}
+.prompts {
   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* transition: 2s;
+    opacity: ; */
+    visibility: hidden;
+    
 }
 
 
-
+/* @media (max-width: 362px) {
+    .longWord:disabled { 
+        display: block;
+        color: chartreuse;
+        background-color: red;
+        border: 1px solid red;
+    
+    }
+    .loNone {
+        display: none;
+    }
+}
+@media (min-width: 362px) {
+    .longWord { 
+        display: none;
+    
+    }
+} */
 .butCheckNone {
     height: 100%;
 }
@@ -159,4 +211,10 @@ button {
     .longWord {
         display: none;
     }
+    .prompts {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    
 }

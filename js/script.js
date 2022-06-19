@@ -199,3 +199,22 @@ function wrapFn() {
         }
     }
 }
+let btnPrompt = document.querySelector('.butPrompt');
+let firstLetter = document.querySelector('.firstLetter');
+let lastLetter = document.querySelector('.lastLetter');
+let prompts = document.querySelector('.prompts');
+btnPrompt.addEventListener('click', promptTwoLetters);
+function promptTwoLetters(event) {
+    let activeSlide = document.querySelector('.swiper-slide-active');
+    let activeSlideID = activeSlide.getAttribute('id');
+    let word = objData[activeSlideID];
+    firstLetter.innerHTML = `первая буква :  ${word[0]}`;
+    lastLetter.innerHTML = `последняя буква :  ${word[word.length - 1]}`;
+    //prompts.style.opacity = 1;
+    prompts.style.visibility = 'visible';
+    setTimeout(()=>{
+        prompts.style.visibility = 'hidden';
+        //prompts.style.opacity = 1;
+    }, 2000);
+    
+}

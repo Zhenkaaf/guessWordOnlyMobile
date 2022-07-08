@@ -45,7 +45,6 @@ body {
 }
 .container {
     height: 100%;
-
 }
 
 .swiper-slide-active .wrap {
@@ -56,9 +55,7 @@ body {
 
 }
 .swiper-slide {
-   
     min-height: 250px;
-    
 }
 
 .wrap {
@@ -76,7 +73,7 @@ body {
 .song audio {
     display: block;
     margin: 0 auto;
-    margin-bottom: 20px;
+   /*  margin-bottom: 20px; */
     margin-top: 20px
 }
 
@@ -90,15 +87,15 @@ body {
 
 .empty {
     margin: 3px;
-    width: 37px;
-    height: 37px;
+    width: 38px;
+    height: 38px;
     background-color: darkgray;
 }
 
 .drag {
     position: absolute;
-    width: 37px;
-    height: 37px;
+    width: 38px;
+    height: 38px;
     background-color: red;
     z-index: 1;
    
@@ -129,7 +126,7 @@ button {
 }
 
 .text {
-    min-height: 50px;
+    min-height: 55px;
     padding: 10px;
     z-index: 5;
 }
@@ -138,8 +135,7 @@ button {
     /*  padding: 50px 20px 0px 20px ; */
     display: flex;
     justify-content: space-between;
-    position: relative;
-   
+    position: relative; 
 }
 .swiper-button-prev,
 .swiper-button-next {
@@ -154,17 +150,17 @@ button {
 .swiper-wrapper {
     height: 100%;
 }
-
-.swiper {}
+.parentPromts {
+    position: relative;
+   /*  margin: 0 auto; */
+}
 .prompts {
-  
     display: flex;
     flex-direction: column;
     align-items: center;
     /* transition: 2s;
     opacity: ; */
     visibility: hidden;
-    
 }
 
 
@@ -188,6 +184,10 @@ button {
 } */
 .butCheckNone {
     height: 100%;
+}
+
+.boxToAudioAnswerNo {
+    display: none;
 }
 /* портретная ориентация */
 @media screen and (orientation:portrait) {
@@ -214,7 +214,15 @@ button {
     .prompts {
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
+       /*  justify-content: space-evenly; */
+        position: absolute;
+        width: 310px;
+        top: -82px;
+        left: 50%;
+        margin-left: -155px;
+    }
+    .firstLetter{
+       margin-right: 30px;
     }
     
 }

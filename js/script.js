@@ -13,14 +13,14 @@ let objData = {
     2: 'напомнить',
     3: 'снег',
     4: 'харькову',
-    5: 'комплименты ',
+    5: 'комплименты',
     6: 'о это мы с мамой',
     7: 'чужие',
     8: 'идеал',
     9: 'обруч',
     10: 'милашка',
     11: 'почтомата',
-    12: 'искупаться в борще',
+    12: 'в борще',
     13: 'чудо',
     14: 'мишки',
     15: 'слон',
@@ -71,18 +71,45 @@ let objData = {
     60: 'яблоко-груша',
     61: 'ломают голову',
     62: 'шоколадом',
-
-
-
 }
+let compliments = ['Молодец',
+                    'Умничка',
+                    'Кристина!!! Как ты догадалась?',
+                    'Умница',
+                    'Как тебе это удаётся',
+                    'Таки да',
+                    'Ну я прям не знаю, ты талантище',
+                    'Ты просто чемпион по разгадыванию',
+                    'Ты умеешь разгадывать загадки',
+                    'Восхищаюсь твоим умом',
+                    'Это была сложная загадка, но ты смогла',
+                    'Молодчинка',
+                    'Ты талантище',
+                    'Аплодирую стоя',
+                    'Восхищаюсь твоей сообразительностью',
+                    'Ты такая догадливая',
+                    'У меня просто нет слов',
+                    'Умничка',
+                    'Это была самая сложная загадка, но ты справилась',
+                    'У тебя талант разгадывать загадки',
+                    'Да, да, да',
+                    'Ну конечно же',
+                    'Бесспорно',
+                    'Абсолютно',
+                    'Умничка, молодец'
+                ];
 /* let long = document.querySelector('.longWord');
 long.innerHTML = 'переверни телефон'; */
 function shuffle(activeSlideID) {
     let array = objData[activeSlideID].split('');
     let originalWord = objData[activeSlideID].split('');
     let jumbledWord = array.sort(() => Math.random() - 0.5);
-    if (jumbledWord == originalWord) {
-        alert('если вдруг ты сразу увидишь загаданное слово,(буквы стоящие в правильной последовательностиб )сообщи мне об этом');
+    let strOriginalWord = originalWord.toString();
+    let strJumbledWord = jumbledWord.toString();
+    if (strOriginalWord.length == 1) {
+        return jumbledWord;
+    }
+    if (strOriginalWord == strJumbledWord) {
         return shuffle(activeSlideID);
     }
     return jumbledWord;
@@ -106,10 +133,28 @@ function start() {
     //this.setAttribute('disabled', true);
     this.style.display = 'none';
     butCheck.style.display = 'block';
+
 }
 
-
-
+/* let mql = window.matchMedia("(orientation: portrait)");
+    // Прослушка события изменения ориентации
+mql.addListener(function (m) {
+    if ((document.querySelector('.swiper-slide-active .butCheck_longWord')) == true) {
+        alert('try');
+    }
+    let butCheckActive = document.querySelector('.swiper-slide-active .butCheck_longWord');
+    let butStartActive = document.querySelector('.swiper-slide-active .butStart');
+    if (m.matches) {
+        // Изменено на портретный режим
+        butCheckActive.style.display = 'none';
+        butStartActive.style.display = 'none';
+    }
+    else {
+        // Изменено на горизонтальный режим
+        butCheckActive.style.display = 'block';
+    }
+}); */
+let audioNo = document.getElementById('no');
 function checkWord() {
     let activeSlide = document.querySelector('.swiper-slide-active');
     let activeSlideID = activeSlide.getAttribute('id');
@@ -143,12 +188,15 @@ function checkWord() {
 
     let res = emptyArr.join('');
     if (res == correctAnswer) {
-        alert('правильно))))');
+        let randomCompliment = Math.floor(Math.random() * compliments.length);
+        alert(`${compliments[randomCompliment]}
+        правильно!)`);
         audio.style.display = 'block';
         this.style.display = 'none';
     }
     else {
-        alert('ну что ты такое пишешь! ну нет же! не то(');
+        audioNo.play(); 
+        //alert('ну что ты такое пишешь! ну нет же! не то(');
         let box = document.querySelector('.swiper-slide-active .wrap .box');
         const drag = document.querySelectorAll('.swiper-slide-active .drag');
         for (let i = 0; i < drag.length; i++) {
@@ -161,7 +209,6 @@ function checkWord() {
         if (greenBox != null) {
             greenBox.classList.remove('active');
         }
-        console.log(guessWord);
         for (let i = 0; i < guessWord.length; i++) {
             let word = document.createElement('div');
             let em = document.createElement('div');
@@ -198,7 +245,6 @@ function appendTask(guessWord) {
 }
 
 
-
 function wrapFn() {
 
     const wrapper = document.querySelector('.swiper-slide-active .wrap');
@@ -219,13 +265,13 @@ function wrapFn() {
         event.preventDefault();
         let drag = event.target;
         startOffsetTop = drag.offsetTop;
-        startOffsetLeft = drag.offsetLeft; 
-       
+        startOffsetLeft = drag.offsetLeft;
+
     }
 
     function dragMove(event) {
         event.preventDefault();
-        let drag = event.target; 
+        let drag = event.target;
         let touch = event.targetTouches[0];
 
         drag.style.top = `${touch.pageY - wrapper.offsetTop - (drag.offsetHeight / 2)}px`;
